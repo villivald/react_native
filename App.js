@@ -33,14 +33,6 @@ export default function App() {
 
   return (
     <View style={styles.screen}>
-      <TouchableHighlight
-        onPress={() => setAddMode(true)}
-        style={styles.button}
-        activeOpacity={0.6}
-        underlayColor={'#30C4C9'}
-      >
-        <Text style={styles.buttonText}>{'➕'}</Text>
-      </TouchableHighlight>
       <GoalInput
         visible={isAddMode}
         onAddTask={addTask}
@@ -56,13 +48,23 @@ export default function App() {
           />
         )}
       />
+      <TouchableHighlight
+        onPress={() => setAddMode(true)}
+        style={styles.button}
+        activeOpacity={0.6}
+        underlayColor={'#30C4C9'}
+      >
+        <Text style={styles.buttonText}>{'➕'}</Text>
+      </TouchableHighlight>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   screen: {
-    padding: 90,
+    paddingTop: 80,
+    paddingLeft: 50,
+    paddingRight: 50,
   },
   button: {
     height: 60,
@@ -70,10 +72,12 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     borderColor: '#30C4C9',
     borderWidth: 7,
-    marginLeft: 90,
+    marginLeft: 130,
     marginBottom: 20,
+    marginTop: 30,
   },
   buttonText: {
     fontSize: 40,
+    paddingLeft: 1,
   },
 })
