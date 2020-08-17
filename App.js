@@ -1,5 +1,11 @@
 import React, { useState } from 'react'
-import { StyleSheet, View, FlatList, Button } from 'react-native'
+import {
+  StyleSheet,
+  View,
+  FlatList,
+  Text,
+  TouchableHighlight,
+} from 'react-native'
 import GoalItem from './components/GoalItem'
 import GoalInput from './components/GoalInput'
 
@@ -27,7 +33,14 @@ export default function App() {
 
   return (
     <View style={styles.screen}>
-      <Button title="Add new task" onPress={() => setAddMode(true)} />
+      <TouchableHighlight
+        onPress={() => setAddMode(true)}
+        style={styles.button}
+        activeOpacity={0.6}
+        underlayColor={'#30C4C9'}
+      >
+        <Text style={styles.buttonText}>{'➕'}</Text>
+      </TouchableHighlight>
       <GoalInput
         visible={isAddMode}
         onAddTask={addTask}
@@ -50,5 +63,17 @@ export default function App() {
 const styles = StyleSheet.create({
   screen: {
     padding: 90,
+  },
+  button: {
+    height: 60,
+    width: 60,
+    borderRadius: 50,
+    borderColor: '#30C4C9',
+    borderWidth: 7,
+    marginLeft: 90,
+    marginBottom: 20,
+  },
+  buttonText: {
+    fontSize: 40,
   },
 })
