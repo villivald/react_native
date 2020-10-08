@@ -1,6 +1,5 @@
 ## Todo App | React Native
 
-<img src="https://github.com/favicon.ico" height="64">
+<img src="https://i.imgur.com/RHH76KL.png" height="164">
 
-![Imgur](https://i.imgur.com/RHH76KL.png=12x24)
-![Imgur](https://i.imgur.com/u74vaOx.png=24x48)
+<img src="https://i.imgur.com/u74vaOx.png" height="164">
